@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+*, html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+html {
+  background: black;
+}
+
+body {
+  background: gray;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.intro {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
+  background-attachment: fixed;
+}
+.intro header {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 48px;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  padding: 10px;
+}
+.intro header .logo {
+  flex: 1;
+  text-align: center;
+}
+.intro header .logo a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: antiquewhite;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+.intro header .spacer {
+  flex: 5;
+}
+.intro header .menu-btn-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.intro header .menu-btn-box .menu-btn {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.intro header .menu-btn-box .menu-btn .menu-btn_line {
+  width: 100%;
+  height: 2px;
+  background: white;
+}
+.intro .menu-box {
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(300px);
+  transition: 0.2s ease-in-out;
+}
+.intro .menu-box .x-btn {
+  width: 100%;
+  padding: 10px;
+}
+.intro .menu-box .x-btn a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  width: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  font-family: sans-serif;
+  margin: 0 0 0 auto;
+}
+.intro .menu-box .menu {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+}
+.intro .menu-box .menu .menu_item {
+  list-style: none;
+}
+.intro .menu-box .menu .menu_item a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 3px;
+}
+.intro .show-menu-btn {
+  transform: translateX(0);
+}
+.intro .intro-info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro .intro-info .intro-info-data {
+  text-align: center;
+  padding: 30px 60px;
+  border-radius: 5px;
+}
+.intro .intro-info .intro-info-data h2 {
+  font-size: 4em;
+  font-family: "Ubuntu", sans-serif;
+  color: bisque;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+.intro .intro-info .intro-info-data p {
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 2px;
+  font-size: 1.5em;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+#about .about-header {
+  background: #fffefe;
+  width: 100%;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#about .about-header > p {
+  width: 40%;
+  font-size: 1.4em;
+  text-align: justify;
+}
+#about .about-content {
+  background: #f5f1f1;
+  width: 100%;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#about .about-content .about-content-top {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+}
+#about .about-content .about-content-top > .about-content-top-btn {
+  display: none;
+  padding: 10px 18px;
+  border: 1px solid #5e805e;
+  text-decoration: none;
+  color: #5e805e;
+  text-transform: uppercase;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+}
+#about .about-content .about-content-body {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+#about .about-content .about-content-body .projectLink {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: all 0.9s ease-in-out;
+}
+#about .about-content .about-content-body .projectLink.pro1 {
+  background: gray;
+}
+#about .about-content .about-content-body .projectLink.pro2 {
+  background: gray;
+}
+#about .about-content .about-content-body .projectLink.pro3 {
+  background: gray;
+}
+#about .about-content .about-content-body .projectLink.pro4 {
+  background: gray;
+}
+#about .about-content .about-content-body .projectLink:hover {
+  background-size: 120%;
+}
+
+@media only screen and (max-width: 1200px) {
+  main {
+    height: auto;
+  }
+}
+#skills {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
+  background-attachment: fixed;
+  color: white;
+}
+#skills .skill-box h1 {
+  font-size: 3rem;
+  padding: 40px 0 100px 50px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+}
+#skills .skill-box .skill-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 100px;
+}
+#skills .skill-box .skill-list > .skill-list-ul {
+  flex: 1;
+  list-style: none;
+  text-align: right;
+}
+#skills .skill-box .skill-list > .skill-list-ul .skill-item {
+  width: 60%;
+  margin: 0 auto 30px auto;
+  display: flex;
+  align-items: center;
+}
+#skills .skill-box .skill-list > .skill-list-ul .skill-item:last-child {
+  margin-bottom: 0;
+}
+#skills .skill-box .skill-list > .skill-list-ul .skill-item .skill-text {
+  flex: 2;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+  padding-right: 20px;
+}
+#skills .skill-box .skill-list > .skill-list-ul .skill-item .skill-bar {
+  flex: 4;
+  height: 15px;
+  background: #e9e0e0;
+  border-radius: 15px 0 0 15px;
+  width: 100%;
+}
+#skills .skill-box .skill-list > .skill-list-ul .skill-item .skill-bar .skill-bar-color {
+  height: 100%;
+}
+#skills .skill-box .skill-list > .skill-list-ul .skill-item#skill-html .skill-bar-color {
+  background: #286769;
+  width: 85%;
+}
+#skills .skill-box .skill-list > .skill-list-ul .skill-item#skill-css .skill-bar-color {
+  background: #286769;
+  width: 66%;
+}
+#skills .skill-box .skill-list > .skill-list-ul .skill-item#skill-javascript .skill-bar-color {
+  background: #286769;
+  width: 10%;
+}
+#skills .skill-box .skill-list > .skill-list-ul .skill-item#skill-Bootstrap .skill-bar-color {
+  background: #286769;
+  width: 30%;
+}
+#skills .skill-box .skill-list > .skill-list-ul .skill-item#skill-JQuery .skill-bar-color {
+  background: #286769;
+  width: 5%;
+}
+#skills .skill-box .skill-list > .skill-list-ul .skill-item#skill-Node .skill-bar-color {
+  background: #286769;
+  width: 5%;
+}
+#skills .skill-box .skill-list > .skill-list-ul .skill-item#skill-React .skill-bar-color {
+  background: #286769;
+  width: 2%;
+}
+#skills .skill-box .skill-list > .skill-list-ul .skill-item#skill-Git .skill-bar-color {
+  background: #286769;
+  width: 50%;
+}
+
+@media only screen and (max-width: 800px) {
+  .skill-list {
+    flex-direction: column;
+  }
+  .skill-list .skill-list-ul {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.contact {
+  width: 100%;
+  padding-top: 50px;
+}
+.contact > h1 {
+  font-size: 2.5em;
+  margin-left: 140px;
+}
+.contact > .email-div {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+.contact > .email-div > p {
+  width: 50%;
+  padding-left: 30px;
+}
