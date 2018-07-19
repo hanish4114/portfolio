@@ -24,7 +24,7 @@ body {
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top left;
+    background-position: right top;
     background-attachment: fixed;
     background-image: url('./mainbg.jpg');
 }
@@ -96,12 +96,22 @@ body {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.intro header .menu-btn-box .menu-btn:hover {
+    width: 35px;
 }
 
 .intro header .menu-btn-box .menu-btn .menu-btn_line {
     width: 100%;
     height: 2px;
     background: white;
+}
+
+.intro header .menu-btn-box .menu-btn:hover .menu-btn_line {
+    background: rgb(211, 209, 208);
 }
 
 .intro .menu-box {
@@ -118,21 +128,41 @@ body {
     transition: 0.2s ease-in-out;
 }
 
-.intro .menu-box .x-btn {
-    width: 100%;
-    padding: 10px;
+.intro .menu-box .menu-box-head {
+    padding: 20px;
 }
 
-.intro .menu-box .x-btn a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    width: 20px;
+.menu-box-head .x-btn {
     border: 1px solid white;
     border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    transition: transform 0.1s ease-in-out;
+}
+
+.menu-box-head .x-btn:hover {
+    border: 2px solid rgb(228, 149, 4);
+    transform: rotate(360deg);
+}
+
+.menu-box-head .x-btn a {
+    color: white;
+    text-decoration: none;
     font-family: sans-serif;
-    margin: 0 0 0 auto;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 26px;
+}
+
+.menu-box-head .x-btn:hover a {
+    color: rgb(228, 149, 4);
+    font-weight: 400;
 }
 
 .intro .menu-box .menu {
@@ -163,49 +193,54 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .intro .intro-info .intro-info-data {
     text-align: center;
-    padding: 30px 60px;
-    border-radius: 5px;
+    width: 420px;
 }
 
 .intro .intro-info .intro-info-data h2 {
-    font-size: 4em;
+    font-size: 3.3em;
     font-family: "Ubuntu", sans-serif;
-    color: bisque;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    font-weight: 900;
+    color: rgb(34, 34, 34);
+    text-shadow: 5px 7px 5px rgba(109, 111, 121, 1);
+    margin-bottom: 30px;
 }
 
 .intro .intro-info .intro-info-data p {
     font-family: "Ubuntu", sans-serif;
-    letter-spacing: 2px;
-    font-size: 1.5em;
+    letter-spacing: 3px;
+    font-size: 1.8em;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
+#about {
+    background: #f5f1f1ec;
+    padding: 20px 0 50px 0;
+}
+
+#about .about-header {
+    text-align: center;
+}
+
 #about .about-header h2 {
-    display: flex;
-    background: #f5f1f1;
-    justify-content: center;
     padding-top: 20px;
     font-size: 1.5em;
 }
 
 #about .about-body {
-    background: #f5f1f1;
     width: 100%;
-    height: 35vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #about .about-body>p {
-    width: 40%;
+    width: 50%;
     font-size: 1.4em;
     text-align: justify;
     font-family: 'Special Elite', cursive;
@@ -221,61 +256,37 @@ body {
     align-items: center;
 }
 
-#about .about-content .about-content-top {
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 30px;
+@media only screen and (max-width: 950px) {
+    .intro {
+        background-position: 20% top;
+    }
+    .intro .intro-info {
+        align-items: flex-end;
+        padding-bottom: 50px;
+    }
+    #about .about-body>p {
+        width: 60%;
+    }
 }
 
-#about .about-content .about-content-top>.about-content-top-btn {
-    display: none;
-    padding: 10px 18px;
-    border: 1px solid #5e805e;
-    text-decoration: none;
-    color: #5e805e;
-    text-transform: uppercase;
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
-}
-
-#about .about-content .about-content-body {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-}
-
-#about .about-content .about-content-body .projectLink {
-    width: 300px;
-    height: 300px;
-    margin: 10px;
-    text-align: center;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    transition: all 0.9s ease-in-out;
-}
-
-#about .about-content .about-content-body .projectLink.pro1 {
-    background: gray;
-}
-
-#about .about-content .about-content-body .projectLink.pro2 {
-    background: gray;
-}
-
-#about .about-content .about-content-body .projectLink.pro3 {
-    background: gray;
-}
-
-#about .about-content .about-content-body .projectLink.pro4 {
-    background: gray;
-}
-
-#about .about-content .about-content-body .projectLink:hover {
-    background-size: 120%;
+@media only screen and (max-width: 450px) {
+    .intro {
+        background-position: 40% top;
+    }
+    .intro .intro-info {
+        padding-bottom: 10px;
+    }
+    .intro .intro-info .intro-info-data h2 {
+        background: rgba(255, 255, 255, 0.349);
+        margin-bottom: 5px;
+        font-size: 2.8em;
+    }
+    .intro .intro-info .intro-info-data p {
+        background: rgba(255, 255, 255, 0.349);
+    }
+    #about .about-body>p {
+        width: 90%;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -306,9 +317,40 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     padding-bottom: 100px;
 }
 
+#skills .skill-box .skill-list .skill-item {
+    border: 2px solid rgba(94, 94, 94, 0.466);
+    border-radius: 3px;
+    padding: 35px 0;
+    margin: 20px;
+    min-width: 150px;
+    text-align: center;
+    -webkit-box-shadow: inset 2px 1px 40px -9px rgba(255, 255, 255, 0.19);
+    -moz-box-shadow: inset 2px 1px 40px -9px rgba(255, 255, 255, 0.19);
+    box-shadow: inset 2px 1px 40px -9px rgba(255, 255, 255, 0.19);
+    transition: all 0.2s ease-in;
+    cursor: help;
+}
+
+#skills .skill-box .skill-list .skill-item:hover {
+    border: 2px solid rgba(202, 202, 202, 0.747);
+    border-radius: 50%;
+}
+
+#skills .skill-box .skill-list .skill-item>i {
+    font-size: 3.5em;
+}
+
+#skills .skill-box .skill-list .skill-item>p {
+    font-size: 1.5em;
+    letter-spacing: 3px;
+}
+
+
+/* 
 #skills .skill-box .skill-list>.skill-list-ul {
     flex: 1;
     list-style: none;
@@ -347,51 +389,59 @@ body {
 
 #skills .skill-box .skill-list>.skill-list-ul .skill-item#skill-html .skill-bar-color {
     background: #286769;
-    width: 85%;
+    width: 90%;
 }
 
 #skills .skill-box .skill-list>.skill-list-ul .skill-item#skill-css .skill-bar-color {
     background: #286769;
-    width: 66%;
+    width: 80%;
 }
 
 #skills .skill-box .skill-list>.skill-list-ul .skill-item#skill-javascript .skill-bar-color {
     background: #286769;
-    width: 10%;
+    width: 40%;
 }
 
 #skills .skill-box .skill-list>.skill-list-ul .skill-item#skill-Bootstrap .skill-bar-color {
     background: #286769;
-    width: 30%;
+    width: 70%;
 }
 
 #skills .skill-box .skill-list>.skill-list-ul .skill-item#skill-JQuery .skill-bar-color {
     background: #286769;
-    width: 5%;
+    width: 40%;
+}
+
+#skills .skill-box .skill-list>.skill-list-ul .skill-item#skill-Oracle .skill-bar-color {
+    background: #286769;
+    width: 75%;
 }
 
 #skills .skill-box .skill-list>.skill-list-ul .skill-item#skill-Node .skill-bar-color {
     background: #286769;
-    width: 5%;
+    width: 39%;
 }
 
 #skills .skill-box .skill-list>.skill-list-ul .skill-item#skill-React .skill-bar-color {
     background: #286769;
-    width: 2%;
+    width: 35%;
 }
 
 #skills .skill-box .skill-list>.skill-list-ul .skill-item#skill-Git .skill-bar-color {
     background: #286769;
     width: 50%;
-}
+} */
 
-@media only screen and (max-width: 800px) {
-    .skill-list {
-        flex-direction: column;
+@media only screen and (max-width: 900px) {
+    #skills .skill-box .skill-list .skill-item {
+        padding: 20px 0;
+        min-width: 120px;
     }
-    .skill-list .skill-list-ul {
-        width: 100%;
-        margin-bottom: 20px;
+    #skills .skill-box .skill-list .skill-item>i {
+        font-size: 2.5em;
+    }
+    #skills .skill-box .skill-list .skill-item>p {
+        font-size: 1.2em;
     }
 }
 
