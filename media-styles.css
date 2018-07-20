@@ -1,0 +1,67 @@
+@media only screen and (max-width: 1100px) {
+    .intro .intro-info {
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .intro {
+        background-position: 20% top;
+    }
+    .intro .intro-info {
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding-bottom: 50px;
+    }
+    .intro .intro-info .intro-info-data {
+        width: 60%;
+    }
+    .intro .intro-info .intro-info-data h2 {
+        font-size: 2.5em;
+    }
+    .intro .intro-info .intro-info-data p {
+        font-size: 1.5em;
+    }
+    #skills .skill-box .skill-list .skill-item {
+        padding: 20px 0;
+        min-width: 120px;
+        min-height: 120px;
+    }
+    #skills .skill-box .skill-list .skill-item>i {
+        font-size: 2.5em;
+    }
+    #skills .skill-box .skill-list .skill-item>p {
+        font-size: 1.2em;
+    }
+    #about .about-body>p {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .intro {
+        background-position: 40% top;
+    }
+    .intro .intro-info {
+        padding-bottom: 10px;
+    }
+    .intro .intro-info .intro-info-data {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.356);
+    }
+    .intro .intro-info .intro-info-data h2 {
+        font-size: 2em;
+        text-shadow: 5px 7px 5px rgba(48, 48, 48, 0.527);
+        margin-bottom: 5px;
+    }
+    .intro .intro-info .intro-info-data p {
+        font-size: 1em;
+    }
+    #about .about-body>p {
+        width: 90%;
+        font-size: 1.2em;
+        letter-spacing: 1px;
+    }
+}

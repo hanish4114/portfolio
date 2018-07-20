@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Ubuntu");
-@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100');
 *,
 html,
 body {
@@ -14,7 +15,6 @@ html {
 }
 
 body {
-    background: gray;
     width: 100%;
     margin: 0 auto;
 }
@@ -199,7 +199,7 @@ body {
 
 .intro .intro-info .intro-info-data {
     text-align: center;
-    width: 420px;
+    width: 50%;
 }
 
 .intro .intro-info .intro-info-data h2 {
@@ -225,11 +225,12 @@ body {
 
 #about .about-header {
     text-align: center;
+    padding: 20px;
 }
 
 #about .about-header h2 {
     padding-top: 20px;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 #about .about-body {
@@ -241,9 +242,11 @@ body {
 
 #about .about-body>p {
     width: 50%;
-    font-size: 1.4em;
+    font-size: 1.5em;
     text-align: justify;
-    font-family: 'Special Elite', cursive;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 2;
+    letter-spacing: 2px;
 }
 
 #about .about-content {
@@ -254,45 +257,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-@media only screen and (max-width: 950px) {
-    .intro {
-        background-position: 20% top;
-    }
-    .intro .intro-info {
-        align-items: flex-end;
-        padding-bottom: 50px;
-    }
-    #about .about-body>p {
-        width: 60%;
-    }
-}
-
-@media only screen and (max-width: 450px) {
-    .intro {
-        background-position: 40% top;
-    }
-    .intro .intro-info {
-        padding-bottom: 10px;
-    }
-    .intro .intro-info .intro-info-data h2 {
-        background: rgba(255, 255, 255, 0.349);
-        margin-bottom: 5px;
-        font-size: 2.8em;
-    }
-    .intro .intro-info .intro-info-data p {
-        background: rgba(255, 255, 255, 0.349);
-    }
-    #about .about-body>p {
-        width: 90%;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    main {
-        height: auto;
-    }
 }
 
 #skills {
@@ -306,7 +270,7 @@ body {
 
 #skills .skill-box h1 {
     font-size: 3rem;
-    padding: 40px 0 100px 50px;
+    padding: 40px 0 100px 0;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     color: white;
     text-align: center;
@@ -327,6 +291,7 @@ body {
     padding: 35px 0;
     margin: 20px;
     min-width: 150px;
+    min-height: 160px;
     text-align: center;
     -webkit-box-shadow: inset 2px 1px 40px -9px rgba(255, 255, 255, 0.19);
     -moz-box-shadow: inset 2px 1px 40px -9px rgba(255, 255, 255, 0.19);
@@ -344,130 +309,150 @@ body {
     font-size: 3.5em;
 }
 
+#skills .skill-box .skill-list .skill-item>img {
+    height: 40px;
+}
+
 #skills .skill-box .skill-list .skill-item>p {
     font-size: 1.5em;
     letter-spacing: 3px;
 }
 
-
-/* 
-#skills .skill-box .skill-list>.skill-list-ul {
-    flex: 1;
-    list-style: none;
-    text-align: right;
+#contact {
+    padding: 50px 0 10px 0;
+    background: #323B42;
 }
 
-#skills .skill-box .skill-list>.skill-list-ul .skill-item {
-    width: 60%;
-    margin: 0 auto 30px auto;
+#contact .contact-body {
+    width: 40%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#contact .contact-body h1 {
+    padding: 40px 0 80px 0;
+    font-size: 3.2rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 1;
+    color: rgb(151, 145, 145);
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+#contact .contact-body form {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#contact .contact-body form input {
+    flex: 0 0 48%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgb(151, 145, 145);
+    font-size: 1em;
+    letter-spacing: 2px;
+    padding: 0 0 15px 10px;
+    color: white;
+}
+
+#contact .contact-body form input:focus {
+    border-bottom: 1px solid white;
+}
+
+#contact .contact-body form input[type=email] {
+    margin-left: 20px;
+}
+
+#contact .contact-body form textarea {
+    flex: 0 0 96%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgb(151, 145, 145);
+    font-size: 1em;
+    letter-spacing: 2px;
+    margin: 30px 0;
+    padding: 0 0 0 10px;
+    color: white;
+    align-self: center;
+    resize: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#contact .contact-body form textarea:focus {
+    border-bottom: 1px solid white;
+}
+
+#contact .contact-body form button {
+    background: none;
+    border: none;
+    border: 1px solid rgb(151, 145, 145);
+    padding: 15px 40px;
+    color: rgb(151, 145, 145);
+    border-radius: 4px;
+    margin: 40px 0;
+    cursor: pointer;
+}
+
+#contact .contact-body form button:hover {
+    border: 1px solid white;
+    color: white;
+}
+
+.blur {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px)
+}
+
+#contact .contact-body .contact-model {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    width: 80%;
+    padding: 30px;
+    border: 1px solid rgba(151, 145, 145, 0.377);
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    -webkit-box-shadow: 10px 10px 13px -1px rgba(36, 36, 36, 1);
+    -moz-box-shadow: 10px 10px 13px -1px rgba(36, 36, 36, 1);
+    box-shadow: 10px 10px 13px -1px rgba(36, 36, 36, 1);
+}
+
+#contact .contact-body .contact-model h2 {
+    font-size: 2rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 1;
+    color: rgb(151, 145, 145);
+    margin-bottom: 30px;
+}
+
+#contact .contact-body .contact-model h2>i {
+    font-size: 3rem;
+}
+
+#contact .contact-body .contact-model h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2rem;
+    font-weight: 1;
+    color: rgb(151, 145, 145);
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    transform: scaleY(1.4);
+}
+
+#contact .contact-body .contact-model .contact-icons {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-#skills .skill-box .skill-list>.skill-list-ul .skill-item:last-child {
-    margin-bottom: 0;
-}
-
-#skills .skill-box .skill-list>.skill-list-ul .skill-item .skill-text {
-    flex: 2;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.5rem;
-    padding-right: 20px;
-}
-
-#skills .skill-box .skill-list>.skill-list-ul .skill-item .skill-bar {
-    flex: 4;
-    height: 15px;
-    background: #e9e0e0;
-    border-radius: 15px 0 0 15px;
-    width: 100%;
-}
-
-#skills .skill-box .skill-list>.skill-list-ul .skill-item .skill-bar .skill-bar-color {
-    height: 100%;
-}
-
-#skills .skill-box .skill-list>.skill-list-ul .skill-item#skill-html .skill-bar-color {
-    background: #286769;
-    width: 90%;
-}
-
-#skills .skill-box .skill-list>.skill-list-ul .skill-item#skill-css .skill-bar-color {
-    background: #286769;
-    width: 80%;
-}
-
-#skills .skill-box .skill-list>.skill-list-ul .skill-item#skill-javascript .skill-bar-color {
-    background: #286769;
-    width: 40%;
-}
-
-#skills .skill-box .skill-list>.skill-list-ul .skill-item#skill-Bootstrap .skill-bar-color {
-    background: #286769;
-    width: 70%;
-}
-
-#skills .skill-box .skill-list>.skill-list-ul .skill-item#skill-JQuery .skill-bar-color {
-    background: #286769;
-    width: 40%;
-}
-
-#skills .skill-box .skill-list>.skill-list-ul .skill-item#skill-Oracle .skill-bar-color {
-    background: #286769;
-    width: 75%;
-}
-
-#skills .skill-box .skill-list>.skill-list-ul .skill-item#skill-Node .skill-bar-color {
-    background: #286769;
-    width: 39%;
-}
-
-#skills .skill-box .skill-list>.skill-list-ul .skill-item#skill-React .skill-bar-color {
-    background: #286769;
-    width: 35%;
-}
-
-#skills .skill-box .skill-list>.skill-list-ul .skill-item#skill-Git .skill-bar-color {
-    background: #286769;
-    width: 50%;
-} */
-
-@media only screen and (max-width: 900px) {
-    #skills .skill-box .skill-list .skill-item {
-        padding: 20px 0;
-        min-width: 120px;
-    }
-    #skills .skill-box .skill-list .skill-item>i {
-        font-size: 2.5em;
-    }
-    #skills .skill-box .skill-list .skill-item>p {
-        font-size: 1.2em;
-    }
-}
-
-.contact {
-    background-image: url('./formbg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: scroll;
-    width: 65%;
-    height: 90vh;
-    /* padding-top: 50px; */
-}
-
-.contact>h1 {
-    font-size: 2.5em;
-    margin-left: 140px;
-}
-
-.contact>.email-div {
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-}
-
-.contact>.email-div>p {
-    width: 50%;
-    padding-left: 30px;
+#contact .contact-body .contact-model .contact-icons a {
+    margin: 10px 20px;
+    color: rgb(151, 145, 145);
 }

@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="media-styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <meta charset="utf-8">
     <title>hani's</title>
@@ -25,7 +26,9 @@
         </header>
         <div id="menu-box" class="menu-box">
             <div class='menu-box-head'>
-                <div id='x-btn' class='x-btn'><a href="#">x</a></div>
+                <div id='x-btn' class='x-btn'>
+                    <a href="#">x</a>
+                </div>
             </div>
             <ul class="menu">
                 <li class="menu_item">
@@ -55,10 +58,9 @@
             <h2> Über Mich </h2>
         </div>
         <div class="about-body">
-            <p>Hey, ich bin Hani, 30 jahre alt und Juniour Web Developer. Ich entwickle responsive Websites mit den die aktuall wichtigsten Programmiersprachen wie HTML5, CSS3 und JavaScript. auch in Backend Development habe ich mehrere Jahre Erfahrung mit
-                Oracle. </p>
+            <p>Hey, ich bin Hani, 30 jahre alt und Juniour Web Developer. Ich entwickle responsive Websites mit den aktuell wichtigsten Programmiersprachen wie HTML5, CSS3 und JavaScript. Auch in Backend Development habe ich mehrere Jahre Erfahrung mit Oracle.
+            </p>
         </div>
-        <!-- webpack-dev-server --inline --content-base dist/ --open -->
     </section>
 
     <section id='skills'>
@@ -94,86 +96,58 @@
                     <p>Database</p>
                 </div>
                 <div class="skill-item">
-                    <i class="fab fa-github"></i>
-                    <p>GitHub</p>
+                    <i class="fab fa-git"></i>
+                    <p>Git</p>
                 </div>
-
-
-                <!-- <ul class="skill-list-ul">
-                    <li class="skill-item" id='skill-html'>
-                        <span class='skill-text'>HTML</span>
-                        <div class="skill-bar">
-                            <div class="skill-bar-color"></div>
-                        </div>
-                    </li>
-                    <li class="skill-item" id='skill-css'>
-                        <span class='skill-text'>CSS</span>
-                        <div class="skill-bar">
-                            <div class="skill-bar-color"></div>
-                        </div>
-                    </li>
-                    <li class="skill-item" id='skill-Bootstrap'>
-                        <span class='skill-text'>Bootstrap</span>
-                        <div class="skill-bar">
-                            <div class="skill-bar-color"></div>
-                        </div>
-                    </li>
-                    <li class="skill-item" id='skill-javascript'>
-                        <span class='skill-text'>JavaScript</span>
-                        <div class="skill-bar">
-                            <div class="skill-bar-color"></div>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="skill-list-ul">
-
-                    <li class="skill-item" id='skill-Oracle'>
-                        <span class='skill-text'>Oracle</span>
-                        <div class="skill-bar">
-                            <div class="skill-bar-color"></div>
-                        </div>
-                    </li>
-                    <li class="skill-item" id='skill-JQuery'>
-                        <span class='skill-text'>JQuery</span>
-                        <div class="skill-bar">
-                            <div class="skill-bar-color"></div>
-                        </div>
-                    </li>
-                    <li class="skill-item" id='skill-Node'>
-                        <span class='skill-text'>Node</span>
-                        <div class="skill-bar">
-                            <div class="skill-bar-color"></div>
-                        </div>
-                    </li>
-                    <li class="skill-item" id='skill-React'>
-                        <span class='skill-text'>React</span>
-                        <div class="skill-bar">
-                            <div class="skill-bar-color"></div>
-                        </div>
-                    </li>
-                    <li class="skill-item" id='skill-Git'>
-                        <span class='skill-text'>Github</span>
-                        <div class="skill-bar">
-                            <div class="skill-bar-color"></div>
-                        </div>
-                    </li>
-                </ul> -->
             </div>
         </div>
     </section>
     <section id='projects'>
     </section>
+
+
+    <section id='about'>
+        <div class="about-header">
+            <h2>Hört sich das spannend an?</h2>
+        </div>
+        <div class="about-body">
+
+            <p> Meine Programmierbegeisterung begann in Syrien mit einem ersten Kontakt mit Databases und zwar Oracle. Sehr schnell lernte ich auch andere Progrmmiersprachen kennen und begeisterte mich auch für sie. Ich bewundere Oracle, weil es mir erlaubt
+                ein Perfektionist zu sein. Nun habe ich bei DCI "Digital Carrer Institut" die Grundlagen und Programmiersprachen für Frontend-Programmierung kennengelearnt und suche nun neue Herausforderungen. Mit Ihnen?
+            </p>
+        </div>
+    </section>
     <section id='contact' class="contact">
-        <h1>Hört sich das spannend an?</h1>
-        <div class="email-div">
-            <button class="email-btn">Email Senden</button>
-            <div>
-                <form action="post">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Enter Your Email" required>
-                    <textarea placeholder="Your Massage"></textarea>
-                </form>
+        <div class="contact-body">
+            <h1>Get In touch with me</h1>
+            <form class="blur" action="mailto:hani-s-n@hotmail.com" method="post">
+                <input type="text" placeholder="Your Name[required]">
+                <input type="email" placeholder="Your Email[required]">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit">Get in touch</button>
+            </form>
+            <div class="contact-model">
+                <h2>
+                    Hani Sheikh Najib
+                </h2>
+                <h3>
+                    <i class="fas fa-phone-volume fa-lg"></i> +49-176-21478153
+                </h3>
+                <div class="contact-icons">
+                    <a href="https://wa.me/963966101648?text=I'm%20interested%20in%20your%20car%20for%20sale">
+                        <i class="fab fa-4x fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.xing.com/profile/Hani_SheikhNajib/cv?sc_o=mxb_p" target="_blank">
+                        <i class="fab fa-4x fa-xing"></i>
+                    </a>
+                    <a href="/" onclick="show-form">
+                        <i class="fas fa-4x fa-at"></i>
+                    </a>
+                </div>
             </div>
+        </div>
+        <div class="contact-footer">
+            copyrigth
         </div>
     </section>
     <script src="script.js"></script>

@@ -1,18 +1,23 @@
 const menuBtn = document.getElementById('menu-btn');
-    const menuBox = document.getElementById('menu-box');
-    const xBtn = document.getElementById('x-btn');
+const menuBox = document.getElementById('menu-box');
+const xBtn = document.getElementById('x-btn');
+const formBtn = document.getElementById('form-btn');
 
-    menuBtn.addEventListener('click',()=>{
-        console.log(menuBox);
-        
-        menuBox.classList.add('show-menu-btn');
-        
-    });
+menuBtn.addEventListener('click', () => {
+    console.log(menuBox);
 
-    menuBox.addEventListener('click' ,(e)=>{
-        // if(e.target==menuBox)
-            menuBox.classList.remove('show-menu-btn');
-    })
-    xBtn.addEventListener('click' ,()=>{
-        menuBox.classList.remove('show-menu-btn');
-    });
+    menuBox.classList.add('show-menu-btn');
+
+});
+
+menuBox.addEventListener('click', (e) => {
+    // if(e.target==menuBox)
+    menuBox.classList.remove('show-menu-btn');
+})
+xBtn.addEventListener('click', () => {
+    menuBox.classList.remove('show-menu-btn');
+});
+
+formBtn.addEventListener('click', (e) => {
+    formBtn.className.remove('blur');
+})
