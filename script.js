@@ -1,7 +1,7 @@
 const menuBtn = document.getElementById('menu-btn');
 const menuBox = document.getElementById('menu-box');
 const xBtn = document.getElementById('x-btn');
-const formBtn = document.getElementById('form-btn');
+const formBtn = document.getElementById('show-form');
 
 menuBtn.addEventListener('click', () => {
     console.log(menuBox);
