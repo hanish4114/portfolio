@@ -46,6 +46,7 @@
 @media only screen and (max-width: 550px) {
     .intro {
         background-position: 40% top;
+        background-attachment: local;
     }
     .intro .intro-info {
         padding-bottom: 10px;
