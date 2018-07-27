@@ -1,8 +1,8 @@
 const menuBtn = document.getElementById('menu-btn');
 const menuBox = document.getElementById('menu-box');
 const xBtn = document.getElementById('x-btn');
-const formBtn = document.getElementById('show-form');
-
+const eBtn = document.getElementById('email-btn');
+const contactForm = document.getElementById('contact-form');
 menuBtn.addEventListener('click', () => {
     console.log(menuBox);
 
@@ -18,6 +18,8 @@ xBtn.addEventListener('click', () => {
     menuBox.classList.remove('show-menu-btn');
 });
 
-formBtn.addEventListener('click', (e) => {
-    formBtn.className.remove('blur');
-})
+
+eBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    contactForm.classList.toggle('show-form');
+});

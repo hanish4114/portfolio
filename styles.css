@@ -8,6 +8,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-size: 16px;
+    outline: none;
 }
 
 html {
@@ -324,9 +325,9 @@ body {
 }
 
 #contact .contact-body {
-    width: 40%;
+    width: 100%;
     margin: 0 auto;
-    position: relative;
+
 }
 
 #contact .contact-body h1 {
@@ -339,10 +340,25 @@ body {
     letter-spacing: 1px;
 }
 
-#contact .contact-body form {
+.contact-body-content{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+#contact .contact-body form {
+    display: none;
+    flex-wrap: wrap;
+    order: 1;
+    justify-content: center;
+    border: 1px solid rgba(151, 145, 145, 0.377);
+    border-radius: 5px;
+    padding: 30px;
+}
+#contact .contact-body  .show-form{
+    display: flex;
+
 }
 
 #contact .contact-body form input {
@@ -375,7 +391,7 @@ body {
     padding: 0 0 0 10px;
     color: white;
     align-self: center;
-    resize: none;
+    resize: vertical;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -389,10 +405,10 @@ body {
     background: none;
     border: none;
     border: 1px solid rgb(151, 145, 145);
-    padding: 15px 40px;
+    padding: 5px 40px;
     color: rgb(151, 145, 145);
     border-radius: 4px;
-    margin: 40px 0;
+    margin: 20px 0 0 0;
     cursor: pointer;
 }
 
@@ -401,31 +417,17 @@ body {
     color: white;
 }
 
-.blur {
-    -webkit-filter: blur(2px);
-    -moz-filter: blur(2px);
-    -o-filter: blur(2px);
-    -ms-filter: blur(2px);
-    filter: blur(2px)
-}
-
 #contact .contact-body .contact-model {
-    position: absolute;
-    bottom: 10%;
-    left: 10%;
-    width: 80%;
+    margin: 0 30px;
     padding: 30px;
     border: 1px solid rgba(151, 145, 145, 0.377);
     border-radius: 5px;
-    background: rgba(0, 0, 0, 0.3);
     text-align: center;
-    -webkit-box-shadow: 10px 10px 13px -1px rgba(36, 36, 36, 1);
-    -moz-box-shadow: 10px 10px 13px -1px rgba(36, 36, 36, 1);
-    box-shadow: 10px 10px 13px -1px rgba(36, 36, 36, 1);
+order: 2;
 }
 
 #contact .contact-body .contact-model h2 {
-    font-size: 2rem;
+    font-size:2rem;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 1;
     color: rgb(151, 145, 145);
@@ -438,12 +440,21 @@ body {
 
 #contact .contact-body .contact-model h3 {
     font-family: 'Roboto Slab', serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 1;
     color: rgb(151, 145, 145);
     margin-bottom: 20px;
     letter-spacing: 3px;
-    transform: scaleY(1.4);
+    transform: scaleY(1.1);
+}
+#contact .contact-body .contact-model h3 i {
+    transition: all 0.5s ease-in-out;
+
+}
+#contact .contact-body .contact-model h3:hover i {
+    color: rgb(185, 185, 185);
+    transform: scale(1.3);
+
 }
 
 #contact .contact-body .contact-model .contact-icons {
@@ -453,6 +464,51 @@ body {
 }
 
 #contact .contact-body .contact-model .contact-icons a {
+    text-decoration: none;
     margin: 10px 20px;
     color: rgb(151, 145, 145);
+    border: 0.5px solid transparent;
+    width: 80px;
+    height: 80px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
+
+#contact .contact-body .contact-model .contact-icons a i{
+transition: all 0.2s ease-in-out;
+}
+
+.w-icon:hover i{
+    color: #48EE68;
+text-shadow: 2px 1px 5px rgb(0, 0, 0);
+
+}
+.x-icon:hover i {
+    color: #00595E;
+    text-shadow: 2px 1px 5px rgb(0, 0, 0);
+
+}
+.g-icon i{
+border-radius: 55%;
+}
+.g-icon:hover i{
+  color: #24292E;
+  background: rgb(151, 145, 145);
+  text-shadow: 2px 1px 5px rgb(0, 0, 0);
+}
+.e-icon:hover i{
+    color: rgb(6, 87, 141);
+    text-shadow: 2px 1px 5px rgb(0, 0, 0);
+  }
+
+  .contact-footer{
+    color: rgb(151, 145, 145);
+    letter-spacing: 4px;
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+    border-top: 1px dashed rgb(116, 116, 116);
+    padding: 10px 0;
+    background: rgb(31, 31, 31);
+  }

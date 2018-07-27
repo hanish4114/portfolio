@@ -38,11 +38,46 @@
     #about .about-body>p {
         width: 80%;
     }
-    #contact .contact-body {
-        width: 70%;
-    }
+
 }
 
+@media only screen and (max-width: 680px) {
+    #contact .contact-body form{
+        margin: 0;
+
+    }
+    #contact .contact-body form input {
+        margin: 20px 0 0 0;
+        padding: 0 0 5px 10px;
+
+    }
+    #contact .contact-body .contact-model{
+        margin: 0;
+    }
+    #contact .contact-body .contact-model h2{
+        font-size: 1.6rem;
+    }
+    #contact .contact-body .contact-model h3{
+        font-size: 1.3rem;
+
+    }
+
+    #contact .contact-body .contact-model .contact-icons a {
+
+        margin: 10px 10px;
+        width: 70px;
+        height: 70px;
+    }
+    #contact .contact-body form input[type=email] {
+        margin-left: 0;
+    }
+    #contact .contact-body form{
+        order: 3;
+        margin-top: 30px;
+    }
+
+
+}
 @media only screen and (max-width: 550px) {
     .intro {
         background-position: 40% top;
@@ -68,7 +103,5 @@
         font-size: 1.2em;
         letter-spacing: 1px;
     }
-    #contact .contact-body {
-        width: 90%;
-    }
+
 }
