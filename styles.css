@@ -125,17 +125,33 @@ body {
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 1000;
     transform: translateX(300px);
     transition: 0.2s ease-in-out;
 }
 
 .intro .menu-contact-icons{
 display: flex;
-align-content: center;
-justify-content: space-around;
+justify-content: center;
 height: 150px;
 }
+.intro .menu-contact-icons a{
+    margin: 0 10px;
+}
+.menu-contact-icons .w-icon i{
+    color: #48EE68;
+text-shadow: 2px 1px 5px rgb(0, 0, 0);
 
+}
+.menu-contact-icons .x-icon i {
+    color: #00595E;
+    text-shadow: 2px 1px 5px rgb(0, 0, 0);
+
+}
+.menu-contact-icons .g-icon i{
+  color: rgb(233, 232, 232);
+  text-shadow: 2px 1px 5px rgb(0, 0, 0);
+}
 .intro .menu-box .menu-box-head {
     padding: 20px;
 }
@@ -493,25 +509,25 @@ align-items: center;
 transition: all 0.2s ease-in-out;
 }
 
-.w-icon:hover i{
+.contact-icons .w-icon:hover i{
     color: #48EE68;
 text-shadow: 2px 1px 5px rgb(0, 0, 0);
 
 }
-.x-icon:hover i {
+.contact-icons .x-icon:hover i {
     color: #00595E;
     text-shadow: 2px 1px 5px rgb(0, 0, 0);
 
 }
-.g-icon i{
+.contact-icons .g-icon i{
 border-radius: 55%;
 }
-.g-icon:hover i{
+.contact-icons .g-icon:hover i{
   color: #24292E;
   background: rgb(151, 145, 145);
   text-shadow: 2px 1px 5px rgb(0, 0, 0);
 }
-.e-icon:hover i{
+.contact-icons .e-icon:hover i{
     color: rgb(6, 87, 141);
     text-shadow: 2px 1px 5px rgb(0, 0, 0);
   }
