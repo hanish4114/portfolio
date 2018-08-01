@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:300');
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100');
+@import url('https://fonts.googleapis.com/css?family=Kalam:700');
 *,
 html,
 body {
@@ -32,7 +33,7 @@ body {
 
 .intro header {
     position: fixed;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.781);
     width: 100%;
     height: 5em;
     display: flex;
@@ -45,13 +46,6 @@ body {
     flex: 1;
     text-align: center;
     width: 100px;
-    height: 100px;
-    position: relative;
-    top: 35px;
-    -webkit-animation: logo 5s 2;
-    -webkit-animation-direction: alternate;
-    animation: logo 5s 2;
-    animation-direction: alternate;
 }
 
 
@@ -73,12 +67,17 @@ body {
 }
 
 .intro header .logo a {
-    font-size: 1.5rem;
+    font-size: 3rem;
     text-decoration: none;
     color: antiquewhite;
     letter-spacing: 3px;
     font-weight: 700;
-    border: 2px dashed rgba(14, 12, 12, 0.897);
+    font-family: 'Kalam', cursive;
+    /* border: 2px dashed rgba(14, 12, 12, 0.897); */
+    text-transform: uppercase;
+    color: #FFF;
+    text-shadow: #FFF 0 0 10px;
+    
 }
 
 .intro header .spacer {
@@ -92,27 +91,28 @@ body {
 }
 
 .intro header .menu-btn-box .menu-btn {
-    width: 30px;
-    height: 20px;
+    width: 35px;
+    height: 23px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-direction: column;
     cursor: pointer;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .intro header .menu-btn-box .menu-btn:hover {
-    width: 35px;
+    width: 40px;
 }
 
 .intro header .menu-btn-box .menu-btn .menu-btn_line {
     width: 100%;
-    height: 2px;
-    background: white;
+    height: 3px;
+    background: antiquewhite;
 }
 
 .intro header .menu-btn-box .menu-btn:hover .menu-btn_line {
-    background: rgb(211, 209, 208);
+    background: rgb(228, 149, 4);
 }
 
 .intro .menu-box {
