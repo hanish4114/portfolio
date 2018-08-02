@@ -103,5 +103,18 @@
         font-size: 1.2em;
         letter-spacing: 1px;
     }
-
+    #skills .skill-box .skill-list{
+        width: 100%;
+    }
+#skills .skill-list .skill-item {
+    margin: 10px 0;
+    }
+    #skills .git-p{
+        font-size: 1em;
+        padding: 10px;
+    }
+    #skills .git-p i{
+        padding: 10px 0 0 0;
 }
+}
+
